@@ -1,0 +1,13 @@
+# Fichiers générés automatiquement par Python et pytest
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Environnements virtuels et fichiers locaux
+.venv/
+venv/
+.env
+.vscode/
+*.log
+.DS_Store
+Thumbs.db
