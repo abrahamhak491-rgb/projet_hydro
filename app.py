@@ -53,6 +53,8 @@ def accueil() -> None:
                     st.markdown('<span class="etat-afaire">À faire</span>', unsafe_allow_html=True)
                 st.page_link(PAGES[cle], label="Ouvrir", icon=":material/arrow_forward:")
 
+    st.page_link(PAGES["guide"], label="Première utilisation ? Ouvrir le manuel d'utilisation et l'exemple complet", icon=":material/menu_book:")
+
     st.subheader("À savoir avant de commencer")
     c1, c2, c3 = st.columns(3)
     c1.info("**Données** : fichier CSV ou Excel de pluies journalières ou de maxima annuels, avec une série d'au moins 20 à 30 ans.")
@@ -69,6 +71,7 @@ PAGES = {
     "debit": st.Page("pages/5_Debit_pointe.py", title="Débit de pointe", icon="💧"),
     "hydrogramme": st.Page("pages/6_Hydrogramme.py", title="Hydrogramme", icon="🌊"),
     "rapport": st.Page("pages/7_Rapport.py", title="Rapport et exports", icon="📄"),
+    "guide": st.Page("pages/8_Guide.py", title="Manuel d'utilisation", icon="📖"),
 }
 
 navigation = st.navigation(
@@ -78,6 +81,7 @@ navigation = st.navigation(
         "Analyse statistique": [PAGES["ajustement"], PAGES["idf"]],
         "Crue de projet": [PAGES["debit"], PAGES["hydrogramme"]],
         "Résultats": [PAGES["rapport"]],
+        "Aide": [PAGES["guide"]],
     }
 )
 barre_laterale()

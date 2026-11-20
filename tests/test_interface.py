@@ -29,6 +29,6 @@ def test_accueil_et_pages_avec_resultats():
     at.run()
     assert not at.exception
     assert sum("Terminée" in m.value for m in at.markdown) == 6
-    for page in ("1_Bassin", "2_Donnees_pluie", "3_Ajustement", "4_IDF", "5_Debit_pointe", "6_Hydrogramme", "7_Rapport"):
+    for page in ("1_Bassin", "2_Donnees_pluie", "3_Ajustement", "4_IDF", "5_Debit_pointe", "6_Hydrogramme", "7_Rapport", "8_Guide"):
         at.switch_page(f"pages/{page}.py").run()
         assert not at.exception, page
